@@ -1,8 +1,11 @@
-﻿namespace ProjBarberFullStack.Server.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ProjBarberFullStack.Server.Models
 {
 	public class UserModel
 	{
-		protected int Id { get; set; }
+		[Key]
+		public int Id { get; set; }
 		public string User { get; set; }
 		protected string Passoword { get; set; }
 		public string Email { get; set; }
