@@ -90,9 +90,9 @@ namespace ProjBarberFullStack.Server.Services.UserService
 				if (serviceResponse.Data == null)
 					throw new Exception("User not found");
 
-				updatedUser.ChangeDate = DateTime.Now.ToLocalTime();
+				user.ChangeDate = DateTime.Now.ToLocalTime();
 
-				_context.Users.Update(updatedUser);
+				_context.Users.Update(user);
 				await _context.SaveChangesAsync();
 
 				return serviceResponse;

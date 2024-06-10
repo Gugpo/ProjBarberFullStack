@@ -11,5 +11,6 @@ namespace ProjBarberFullStack.Server.DataContext
 
 		}
 		public DbSet<UserModel> Users { get; set; }
+		public DbSet<SchedulingModel> Scheduling { get; set; }
 	}
 }

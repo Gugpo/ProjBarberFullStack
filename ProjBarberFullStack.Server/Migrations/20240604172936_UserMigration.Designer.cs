@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjBarberFullStack.Server.DataContext;
 
@@ -11,9 +12,11 @@ using ProjBarberFullStack.Server.DataContext;
 namespace ProjBarberFullStack.Server.Migrations
 {
 	[DbContext(typeof(ApplicationDbContext))]
-	partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+	[Migration("20240604172936_UserMigration")]
+	partial class UserMigration
 	{
-		protected override void BuildModel(ModelBuilder modelBuilder)
+		/// <inheritdoc />
+		protected override void BuildTargetModel(ModelBuilder modelBuilder)
 		{
 #pragma warning disable 612, 618
 			modelBuilder
@@ -21,39 +24,6 @@ namespace ProjBarberFullStack.Server.Migrations
 				.HasAnnotation("Relational:MaxIdentifierLength", 128);
 
 			SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-			modelBuilder.Entity("ProjBarberFullStack.Server.Models.SchedulingModel", b =>
-				{
-					b.Property<int>("Id")
-						.ValueGeneratedOnAdd()
-						.HasColumnType("int");
-
-					SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-					b.Property<DateTime>("ChangeDate")
-						.HasColumnType("datetime2");
-
-					b.Property<DateTime>("CreationDate")
-						.HasColumnType("datetime2");
-
-					b.Property<string>("Name")
-						.IsRequired()
-						.HasColumnType("nvarchar(max)");
-
-					b.Property<DateTime>("SchedulingDate")
-						.HasColumnType("datetime2");
-
-					b.Property<string>("SchedulingTime")
-						.IsRequired()
-						.HasColumnType("nvarchar(max)");
-
-					b.Property<int>("Services")
-						.HasColumnType("int");
-
-					b.HasKey("Id");
-
-					b.ToTable("Scheduling");
-				});
 
 			modelBuilder.Entity("ProjBarberFullStack.Server.Models.UserModel", b =>
 				{
