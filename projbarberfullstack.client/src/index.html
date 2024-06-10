@@ -1,13 +1,37 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>ProjbarberfullstackClient</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
-</html>
+
+<div class="agendamento-box">
+  <button>Realizar Agendamento</button>
+  <div class="input-box">
+    <label>Procurar</label>
+    <input type="text" name="name" value="" placeholder="Qual horário está buscando ?" />
+  </div>
+</div>
+
+<table class="table">
+
+  <thead>
+    <tr>
+      <th>Disponível</th>
+      <th>Nome</th>
+      <th>Dia</th>
+      <th>Hora</th>
+      <th>btnRealizarAgendar</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        <img src="Assets/images/Ativo.png" alt="Imagem de botão verde" style="height: 20px; width: 20px;" />
+        <img src="Assets/images/Inativo.png" alt="Imagem de botão vermelho" style="height: 20px; width: 20px;" />
+      </td>
+      <td>Gabriela</td>
+      <td>Dia</td>
+      <td>Hora</td>
+      <td>
+        <button>Agendar</button>
+      </td>
+    </tr>
+  </tbody>
+
+</table>
