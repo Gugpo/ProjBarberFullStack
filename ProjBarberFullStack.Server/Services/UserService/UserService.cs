@@ -85,14 +85,14 @@ namespace ProjBarberFullStack.Server.Services.UserService
 			try
 			{
 				UserModel? user = _context.Users.AsNoTracking().FirstOrDefault(x => x.Id == updatedUser.Id);
-				serviceResponse.Data = user;
 
-				if (serviceResponse.Data == null)
+				if (user == null)
 					throw new Exception("User not found");
 
-				user.ChangeDate = DateTime.Now.ToLocalTime();
+				serviceResponse.Data = updatedUser;
+				updatedUser.ChangeDate = DateTime.Now.ToLocalTime();
 
-				_context.Users.Update(user);
+				_context.Users.Update(updatedUser);
 				await _context.SaveChangesAsync();
 
 				return serviceResponse;
