@@ -85,14 +85,15 @@ namespace ProjBarberFullStack.Server.Services.SchedulingService
 			try
 			{
 				SchedulingModel? scheduling = _context.Scheduling.AsNoTracking().FirstOrDefault(x => x.Id == updatedScheduling.Id);
-				serviceResponse.Data = scheduling;
 
-				if (serviceResponse.Data == null)
+				if (scheduling == null)
 					throw new Exception("User not found");
 
-				scheduling.ChangeDate = DateTime.Now.ToLocalTime();
+				serviceResponse.Data = updatedScheduling;
+				updatedScheduling.ChangeDate = DateTime.Now.ToLocalTime();
 
-				_context.Scheduling.Update(scheduling);
+				_context.Scheduling.Update(updatedScheduling);
+				await _context.SaveChangesAsync();
 
 				return serviceResponse;
 			}
