@@ -4,7 +4,7 @@ using ProjBarberFullStack.Server.Services.ServiceSchedule;
 
 namespace ProjBarberFullStack.Server.Controllers
 {
-	[Route("api/controller/v3")]
+	[Route("api/schedule")]
 	[ApiController]
 	public class ScheduleController : ControllerBase
 	{

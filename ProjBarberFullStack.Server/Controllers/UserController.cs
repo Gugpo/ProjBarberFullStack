@@ -5,7 +5,7 @@ using ProjBarberFullStack.Server.Services.UserService;
 
 namespace ProjBarberFullStack.Server.Controllers
 {
-	[Route("api/controller/v1")]
+	[Route("api/user")]
 	[ApiController]
 	public class UserController : ControllerBase
 	{
