@@ -11,9 +11,9 @@ namespace ProjBarberFullStack.Server.Services.UserService
 		{
 			_context = context;
 		}
-		public async Task<ServiceResponse<List<UserModel>>> GetUser()
+		public async Task<ServiceResponseModel<List<UserModel>>> GetUser()
 		{
-			ServiceResponse<List<UserModel>> serviceResponse = new ServiceResponse<List<UserModel>>();
+			ServiceResponseModel<List<UserModel>> serviceResponse = new ServiceResponseModel<List<UserModel>>();
 
 			try
 			{
@@ -32,9 +32,9 @@ namespace ProjBarberFullStack.Server.Services.UserService
 				return serviceResponse;
 			}
 		}
-		public async Task<ServiceResponse<UserModel>> GetUserById(int? id)
+		public async Task<ServiceResponseModel<UserModel>> GetUserById(int? id)
 		{
-			ServiceResponse<UserModel> serviceResponse = new ServiceResponse<UserModel>();
+			ServiceResponseModel<UserModel> serviceResponse = new ServiceResponseModel<UserModel>();
 
 			try
 			{
@@ -54,9 +54,9 @@ namespace ProjBarberFullStack.Server.Services.UserService
 				return serviceResponse;
 			}
 		}
-		public async Task<ServiceResponse<UserModel>> CreateUser(UserModel newUser)
+		public async Task<ServiceResponseModel<UserModel>> CreateUser(UserModel newUser)
 		{
-			ServiceResponse<UserModel> serviceResponse = new ServiceResponse<UserModel>();
+			ServiceResponseModel<UserModel> serviceResponse = new ServiceResponseModel<UserModel>();
 
 			try
 			{
@@ -78,9 +78,9 @@ namespace ProjBarberFullStack.Server.Services.UserService
 				return serviceResponse;
 			}			
 		}
-		public async Task<ServiceResponse<UserModel>> UpdateUser(UserModel updatedUser)
+		public async Task<ServiceResponseModel<UserModel>> UpdateUser(UserModel updatedUser)
 		{
-			ServiceResponse<UserModel> serviceResponse = new ServiceResponse<UserModel>();
+			ServiceResponseModel<UserModel> serviceResponse = new ServiceResponseModel<UserModel>();
 
 			try
 			{
@@ -105,9 +105,9 @@ namespace ProjBarberFullStack.Server.Services.UserService
 				return serviceResponse;
 			}
 		}
-		public async Task<ServiceResponse<UserModel>> DeleteUser(int? id)
+		public async Task<ServiceResponseModel<UserModel>> DeleteUser(int? id)
 		{
-			ServiceResponse<UserModel> serviceResponse = new ServiceResponse<UserModel>();
+			ServiceResponseModel<UserModel> serviceResponse = new ServiceResponseModel<UserModel>();
 
 			try
 			{

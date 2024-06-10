@@ -17,35 +17,35 @@ namespace ProjBarberFullStack.Server.Controllers
 
 		[HttpGet]
 		[Route("GetUser")]
-		public async Task<ActionResult<ServiceResponse<List<UserModel>>>> GetUser()
+		public async Task<ActionResult<ServiceResponseModel<List<UserModel>>>> GetUser()
 		{
 			return Ok(await _userInterface.GetUser());
 		}
 
 		[HttpGet]
 		[Route("GetUserById")]
-		public async Task<ActionResult<ServiceResponse<UserModel>>> GetUserById(int id)
+		public async Task<ActionResult<ServiceResponseModel<UserModel>>> GetUserById(int id)
 		{
 			return Ok(await _userInterface.GetUserById(id));
 		}
 
 		[HttpPost]
 		[Route("CreateUser")]
-		public async Task<ActionResult<ServiceResponse<UserModel>>> CreateUser(UserModel newUser)
+		public async Task<ActionResult<ServiceResponseModel<UserModel>>> CreateUser(UserModel newUser)
 		{
 			return Ok(await _userInterface.CreateUser(newUser));
 		}
 
 		[HttpPut]
 		[Route("UpdateUser")]
-		public async Task<ActionResult<ServiceResponse<UserModel>>> UpdateUser(UserModel updateUser)
+		public async Task<ActionResult<ServiceResponseModel<UserModel>>> UpdateUser(UserModel updateUser)
 		{
 			return Ok(await _userInterface.UpdateUser(updateUser));
 		}
 
 		[HttpDelete]
 		[Route("DeleteUser")]
-		public async Task<ActionResult<ServiceResponse<UserModel>>> DeleteUser(int id)
+		public async Task<ActionResult<ServiceResponseModel<UserModel>>> DeleteUser(int id)
 		{
 			return Ok(await _userInterface.DeleteUser(id));
 		}

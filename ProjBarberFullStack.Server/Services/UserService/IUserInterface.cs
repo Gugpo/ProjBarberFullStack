@@ -4,10 +4,10 @@ namespace ProjBarberFullStack.Server.Services.UserService
 {
 	public interface IUserInterface
 	{
-		Task<ServiceResponse<List<UserModel>>> GetUser();
-		Task<ServiceResponse<UserModel>> GetUserById(int? id);
-		Task<ServiceResponse<UserModel>> CreateUser(UserModel newUser);
-		Task<ServiceResponse<UserModel>> UpdateUser(UserModel updatedUser);
-		Task<ServiceResponse<UserModel>> DeleteUser(int? id);
+		Task<ServiceResponseModel<List<UserModel>>> GetUser();
+		Task<ServiceResponseModel<UserModel>> GetUserById(int? id);
+		Task<ServiceResponseModel<UserModel>> CreateUser(UserModel newUser);
+		Task<ServiceResponseModel<UserModel>> UpdateUser(UserModel updatedUser);
+		Task<ServiceResponseModel<UserModel>> DeleteUser(int? id);
 	}
 }

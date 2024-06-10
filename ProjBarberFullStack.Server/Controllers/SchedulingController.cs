@@ -17,35 +17,35 @@ namespace ProjBarberFullStack.Server.Controllers
 
 		[HttpGet]
 		[Route("GetScheduling")]
-		public async Task<ActionResult<ServiceResponse<List<SchedulingModel>>>> GetScheduling()
+		public async Task<ActionResult<ServiceResponseModel<List<SchedulingModel>>>> GetScheduling()
 		{
 			return Ok(await _schedulingInterface.GetScheduling());
 		}
 
 		[HttpGet]
 		[Route("GetSchedulingById")]
-		public async Task<ActionResult<ServiceResponse<SchedulingModel>>> GetSchedulingById(int id)
+		public async Task<ActionResult<ServiceResponseModel<SchedulingModel>>> GetSchedulingById(int id)
 		{
 			return Ok(await _schedulingInterface.GetSchedulingById(id));
 		}
 
 		[HttpPost]
 		[Route("CreateScheduling")]
-		public async Task<ActionResult<ServiceResponse<SchedulingModel>>> CreateScheduling(SchedulingModel newScheduling)
+		public async Task<ActionResult<ServiceResponseModel<SchedulingModel>>> CreateScheduling(SchedulingModel newScheduling)
 		{
 			return Ok(await _schedulingInterface.CreateScheduling(newScheduling));
 		}
 
 		[HttpPut]
 		[Route("UpdateScheduling")]
-		public async Task<ActionResult<ServiceResponse<SchedulingModel>>> UpdateScheduling(SchedulingModel updateScheduling)
+		public async Task<ActionResult<ServiceResponseModel<SchedulingModel>>> UpdateScheduling(SchedulingModel updateScheduling)
 		{
 			return Ok(await _schedulingInterface.UpdateScheduling(updateScheduling));
 		}
 
 		[HttpDelete]
 		[Route("DeleteScheduling")]
-		public async Task<ActionResult<ServiceResponse<SchedulingModel>>> DeleteScheduling(int id)
+		public async Task<ActionResult<ServiceResponseModel<SchedulingModel>>> DeleteScheduling(int id)
 		{
 			return Ok(await _schedulingInterface.DeleteScheduling(id));
 		}

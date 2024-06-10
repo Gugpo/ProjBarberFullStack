@@ -11,9 +11,9 @@ namespace ProjBarberFullStack.Server.Services.SchedulingService
 		{
 			_context = context;
 		}
-		public async Task<ServiceResponse<List<SchedulingModel>>> GetScheduling()
+		public async Task<ServiceResponseModel<List<SchedulingModel>>> GetScheduling()
 		{
-			ServiceResponse<List<SchedulingModel>> serviceResponse = new ServiceResponse<List<SchedulingModel>>();
+			ServiceResponseModel<List<SchedulingModel>> serviceResponse = new ServiceResponseModel<List<SchedulingModel>>();
 
 			try
 			{
@@ -32,9 +32,9 @@ namespace ProjBarberFullStack.Server.Services.SchedulingService
 				return serviceResponse;
 			}
 		}
-		public async Task<ServiceResponse<SchedulingModel>> GetSchedulingById(int? id)
+		public async Task<ServiceResponseModel<SchedulingModel>> GetSchedulingById(int? id)
 		{
-			ServiceResponse<SchedulingModel> serviceResponse = new ServiceResponse<SchedulingModel>();
+			ServiceResponseModel<SchedulingModel> serviceResponse = new ServiceResponseModel<SchedulingModel>();
 
 			try
 			{
@@ -54,9 +54,9 @@ namespace ProjBarberFullStack.Server.Services.SchedulingService
 				return serviceResponse;
 			}
 		}
-		public async Task<ServiceResponse<SchedulingModel>> CreateScheduling(SchedulingModel newScheduling)
+		public async Task<ServiceResponseModel<SchedulingModel>> CreateScheduling(SchedulingModel newScheduling)
 		{
-			ServiceResponse<SchedulingModel> serviceResponse = new ServiceResponse<SchedulingModel>();
+			ServiceResponseModel<SchedulingModel> serviceResponse = new ServiceResponseModel<SchedulingModel>();
 
 			try
 			{
@@ -78,9 +78,9 @@ namespace ProjBarberFullStack.Server.Services.SchedulingService
 				return serviceResponse;
 			}
 		}
-		public async Task<ServiceResponse<SchedulingModel>> UpdateScheduling(SchedulingModel updatedScheduling)
+		public async Task<ServiceResponseModel<SchedulingModel>> UpdateScheduling(SchedulingModel updatedScheduling)
 		{
-			ServiceResponse<SchedulingModel> serviceResponse = new ServiceResponse<SchedulingModel>();
+			ServiceResponseModel<SchedulingModel> serviceResponse = new ServiceResponseModel<SchedulingModel>();
 
 			try
 			{
@@ -105,9 +105,9 @@ namespace ProjBarberFullStack.Server.Services.SchedulingService
 				return serviceResponse;
 			}
 		}
-		public async Task<ServiceResponse<SchedulingModel>> DeleteScheduling(int? id)
+		public async Task<ServiceResponseModel<SchedulingModel>> DeleteScheduling(int? id)
 		{
-			ServiceResponse<SchedulingModel> serviceResponse = new ServiceResponse<SchedulingModel>();
+			ServiceResponseModel<SchedulingModel> serviceResponse = new ServiceResponseModel<SchedulingModel>();
 
 			try
 			{
