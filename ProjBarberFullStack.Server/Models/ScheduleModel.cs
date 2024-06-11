@@ -7,6 +7,7 @@ namespace ProjBarberFullStack.Server.Models
 		[Key]
 		public int Id { get; set; }
 		public string? Name { get; set; }
+		public bool Active { get; set; } = true;
 		public DateTime ScheduleDate { get; set; }
 		public string? ScheduleTime { get; set; }
 		public DateTime CreationDate { get; set; } = DateTime.Now.ToLocalTime();
