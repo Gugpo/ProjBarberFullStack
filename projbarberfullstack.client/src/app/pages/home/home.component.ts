@@ -7,19 +7,25 @@ import { Schedule } from '../../models/Schedule';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent implements OnInit {
 
   schedules: Schedule[] = [];
   schedulesGeneral: Schedule[] = [];
   constructor(private scheduleService: ScheduleService) { }
 
   ngOnInit(): void {
-    this.scheduleService.getSchedule().subscribe(scheduleData => {
+    this.scheduleService.GetSchedule().subscribe(scheduleData => {
       const dataList = scheduleData.data;
 
       dataList.map((item) => {
-        console.log(item);
+        item.creationDate = new Date(item.creationDate).toLocaleDateString('pt-BR');
+        item.changeDate = new Date(item.changeDate).toLocaleDateString('pt-BR');
       })
+
+      this.schedules = scheduleData.data;
+      this.schedulesGeneral = scheduleData.data;
+
+
     });
   }
 

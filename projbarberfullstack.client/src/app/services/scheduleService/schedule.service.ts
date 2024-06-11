@@ -14,7 +14,7 @@ export class ScheduleService {
 
   constructor(private http: HttpClient) { }
 
-  getSchedule(): Observable<Response<Schedule[]>>{
+  GetSchedule(): Observable<Response<Schedule[]>>{
     return this.http.get<Response<Schedule[]>>(this.apiUrl);
   }
 }
